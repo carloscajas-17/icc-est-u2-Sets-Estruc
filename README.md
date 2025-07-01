@@ -1,18 +1,92 @@
-## Getting Started
+# 🧠 PRACTICA DE SETS 
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+**Autor:** Andrés Cajas  
 
-## Folder Structure
+**Tema:** Colecciones Java - Implementación de `Set` con sus distintas variantes
 
-The workspace contains two folders by default, where:
+**Profesor:** Ing.Pablo Torres
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+**Fecha:** 21/07/2025
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+**Carrera :** Computacion
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+---
 
-## Dependency Management
+## 📌 Objetivo
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Demostrar el uso práctico y conceptual de las colecciones tipo `Set` en Java, a través de ejemplos implementados con `HashSet`, `LinkedHashSet`, `TreeSet` y `TreeSet` con comparadores personalizados.
+
+---
+
+## 🗂️ Paquetes y Clases
+
+- **`controllers.Sets`**  
+  Contiene todos los métodos que crean y devuelven conjuntos (`Set<String>`) usando distintas implementaciones.
+  
+- **`App`**  
+  Ejecuta los métodos de la clase `Sets` y muestra en consola el contenido de cada colección.
+
+---
+
+## ⚙️ Métodos implementados en `Sets`
+
+### 1. 🔹 `contruirHashSet()`
+
+- **Implementación usada:** `HashSet`
+- **Qué hace:**  
+  Crea un conjunto sin duplicados, sin importar el orden de los elementos.
+- **Concepto:**  
+  `HashSet` almacena elementos **únicos**, pero **no garantiza ningún orden** al mostrarlos.
+
+---
+
+### 2. 🔹 `construirLinkedHashSet()`
+
+- **Implementación usada:** `LinkedHashSet`
+- **Qué hace:**  
+  Crea un conjunto sin duplicados, **manteniendo el orden en que se insertaron los elementos**.
+- **Concepto:**  
+  `LinkedHashSet` es igual que `HashSet`, pero **preserva el orden de inserción**.
+
+---
+
+### 3. 🔹 `construirTreeHashSet()`
+
+- **Implementación usada:** `TreeSet`
+- **Qué hace:**  
+  Crea un conjunto sin duplicados, pero los muestra **ordenados alfabéticamente** (orden natural).
+- **Concepto:**  
+  `TreeSet` **ordena automáticamente los elementos** según el orden natural del tipo de datos (alfabético para `String`).
+
+---
+
+### 4. 🔹 `construrirTreeSetConComparador()`
+
+- **Implementación usada:** `TreeSet` + `Comparator` personalizado
+- **Qué hace:**  
+  Ordena primero por **longitud de palabra de menor a mayor**, y si hay empate, **alfabéticamente en orden normal**.
+- **Concepto:**  
+  El `Comparator` permite cambiar el criterio de ordenamiento en un `TreeSet`. Aquí se prioriza:
+  
+  - Palabras más cortas primero
+  - En caso de misma longitud, orden alfabético ascendente
+
+---
+
+### 5. 🔹 `construrirTreeSetConComparadorInverso()`
+
+- **Implementación usada:** `TreeSet` + `Comparator` personalizado (inverso)
+- **Qué hace:**  
+  Ordena primero por **longitud de palabra de mayor a menor**, y si hay empate, **alfabéticamente en orden descendente**.
+- **Concepto:**  
+  Otro uso del `Comparator`, pero esta vez para ordenar de forma inversa:
+
+  - Palabras más largas primero
+  - En caso de empate, orden alfabético descendente
+
+---
+
+
+
+## Resultado
+![Resultado de Ejecucion](SetsConsola.PNG)
