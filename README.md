@@ -89,4 +89,4 @@ Demostrar el uso práctico y conceptual de las colecciones tipo `Set` en Java, a
 
 
 ## Resultado
-![Resultado de Ejecucion](SetsConsola.PNG)
+![Resultado de Ejecucion](SetsConsola.png)
