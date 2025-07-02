@@ -1,3 +1,4 @@
+import controllers.ContactoController;
 import controllers.Sets;
 import java.util.Set;
 
@@ -24,6 +25,11 @@ public class App {
         System.out.println("\n----------------TREESEETCONCOMPARADORINVERSO------------");
         System.out.println("Elementos de TreeSet (mantiene orden de inserción):");
         runTreeSetConComparadorInverso(sets);
+
+        System.out.println("\n----------------CONTACTO--> NOMBRE --> APELLIDO------------");
+        new ContactoController();
+
+        
     }
     
 

@@ -85,8 +85,61 @@ Demostrar el uso práctico y conceptual de las colecciones tipo `Set` en Java, a
   - En caso de empate, orden alfabético descendente
 
 ---
+### 6. 🔹 TreeSet con Objetos Contacto y Comparadores Personalizados
+-**Implementación usada:** TreeSet<Contacto>
+
+-**Qué hace:**
+ Permite almacenar y ordenar elementos de tipo Contacto usando distintos criterios definidos por clases que implementan Comparator<Contacto>.
+
+-**Concepto:**
+ Al trabajar con objetos personalizados como Contacto, TreeSet requiere un Comparator para definir cómo se deben ordenar los elementos.
+ Se aplican comparaciones multinivel (por varios atributos) para ordenar correctamente.
+
+👨‍💻 **Clases y Comparadores**
+
+📦 **models.Contacto**
+
+ Clase que representa una entidad con:
+
+ -nombre
+
+ -apellido
+
+ -telefono
+
+ No implementa Comparable, pero se usa en estructuras TreeSet con ayuda de Comparator.
+
+📦 **utils.ContactoComparator**
+
+ -Orden aplicado:
+
+ --Primero por apellido (ascendente)
+
+ -Luego por nombre (ascendente)
+
+**Uso práctico:**
+ Ordena los contactos con prioridad al apellido. Si hay coincidencia, se considera el nombre.
+
+📦 **utils.ContactoComparadorConNumero**
+
+ -Orden aplicado:
+
+ -Primero por apellido (ascendente)
+
+ -Luego por nombre (ascendente)
+
+ -Finalmente por teléfono (en orden descendente)
+
+**Uso práctico:**
+ Agrega un tercer criterio para diferenciar contactos que tienen el mismo nombre y apellido.
+
+📦 **controllers.ContactoController**
+ Clase encargada de inicializar y poblar los TreeSet con los contactos usando cada uno de los comparadores mencionados.
+ Los métodos privados de ejecución se activan desde App mediante métodos estáticos para mantener el encapsulamiento.
 
 
 
 ## Resultado
 ![Resultado de Ejecucion](SetsConsola.png)
+![Resultado de Ejecucion](SetsContacto.png)
+
