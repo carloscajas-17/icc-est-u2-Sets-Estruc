@@ -1,4 +1,5 @@
 import controllers.ContactoController;
+import controllers.Ejercicios;
 import controllers.Sets;
 import java.util.Set;
 
@@ -28,6 +29,13 @@ public class App {
 
         System.out.println("\n----------------CONTACTO--> NOMBRE --> APELLIDO------------");
         new ContactoController();
+
+        System.out.println("\n--------------EJERCICICO  1  CON LA MEJOR FORMAR--> HASHSET------------");
+        new Ejercicios();
+        
+        
+
+
 
         
     }
